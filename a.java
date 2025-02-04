@@ -55,21 +55,21 @@ Object Methods (Inherited from Object Class)
 
 Comparison & Equality:
 
-    compareTo(String anotherString) - Compares two strings lexicographically.
-    compareToIgnoreCase(String str) - Compares two strings lexicographically, ignoring case differences.
-    contentEquals(CharSequence cs) - Compares the string with the specified CharSequence for content equality.
-    equals(Object obj) - Compares this string to another object.
-    equalsIgnoreCase(String anotherString) - Compares two strings ignoring case differences.
+   1 -1 0 compareTo(String anotherString) - Compares two strings lexicographically.
+   1 -1 0 compareToIgnoreCase(String str) - Compares two strings lexicographically, ignoring case differences.
+    true false contentEquals(CharSequence cs) - Compares the string with the specified CharSequence for content equality.
+   true false equals(Object obj) - Compares this string to another object.
+   true false equalsIgnoreCase(String anotherString) - Compares two strings ignoring case differences.
 
 Search Operations:
 
-    indexOf(String str) - Returns the index of the first occurrence of the substring.
-    lastIndexOf(String str) - Returns the index of the last occurrence of the substring.
-    contains(CharSequence s) - Checks if the string contains the specified sequence of characters.
-    matches(String regex) - Checks if the string matches the given regular expression.
-    regionMatches(...) - Tests if two string regions are equal.
-    startsWith(String prefix) - Checks if the string starts with the specified prefix.
-    endsWith(String suffix) - Checks if the string ends with the specified suffix.
+   -1 indexOf(String str) - Returns the index of the first occurrence of the substring.
+   -1 lastIndexOf(String str) - Returns the index of the last occurrence of the substring.
+   true false contains(CharSequence s) - Checks if the string contains the specified sequence of characters.
+   true false matches(String regex) - Checks if the string matches the given regular expression.
+    true false regionMatches(...) - Tests if two string regions are equal.
+    true false startsWith(String prefix) - Checks if the string starts with the specified prefix.
+    true false endsWith(String suffix) - Checks if the string ends with the specified suffix.
 
 String Modification & Formatting:
 
@@ -118,3 +118,43 @@ Object & Utility Methods:
     describeConstable() - Returns an optional ConstantDesc representation.
     resolveConstantDesc(MethodHandles.Lookup lookup) - Resolves the constant description of this instance.
     transform(Function<String, R> function) - Applies a transformation function to the string.
+
+
+ Arrays:-
+1.  Sorting Methods
+
+    sort(int[] a) - Sorts the array in ascending order.
+    sort(int[] a, int fromIndex, int toIndex) - Sorts the specified range of the array.
+    sort(Object[] a) - Sorts an array of objects based on their Comparable implementation.
+    sort(Object[] a, Comparator<? super T> c) - Sorts an array of objects using a custom comparator.
+    parallelSort(int[] a) - Sorts an array in parallel for better performance.
+    parallelSort(int[] a, int fromIndex, int toIndex) - Parallel sorts a specified range of the array.
+
+2. Searching Methods
+
+    binarySearch(int[] a, int key) - Searches for a key in a sorted array using binary search.
+    binarySearch(int[] a, int fromIndex, int toIndex, int key) - Searches a key in a sorted sub-array using binary search.
+    binarySearch(Object[] a, T key, Comparator<? super T> c) - Searches an object in a sorted array using a custom comparator.
+
+3. Filling Methods
+
+    fill(int[] a, int value) - Fills the entire array with a specified value.
+    fill(int[] a, int fromIndex, int toIndex, int value) - Fills a specific range in the array with a specified value.
+
+4. Copying & Resizing Methods
+
+    copyOf(int[] original, int newLength) - Creates a new array by copying the original array up to the specified length.
+    copyOfRange(int[] original, int from, int to) - Copies a range from the original array into a new array.
+
+5. Converting Arrays to String & List
+
+    toString(int[] a) - Converts the array into a string representation.
+    deepToString(Object[] a) - Converts a multidimensional array into a string.
+    asList(T... a) - Converts an array into a List<T>, which is backed by the array.
+
+6. Checking Equality & Hashing
+
+    equals(int[] a, int[] b) - Compares two arrays for equality.
+    deepEquals(Object[] a, Object[] b) - Compares two multidimensional arrays for deep equality.
+    hashCode(int[] a) - Returns the hash code of an array.
+    deepHashCode(Object[] a) - Returns the deep hash code of a multidimensional array
